@@ -1,26 +1,16 @@
 <?php
-// Change this to your connection info.
-$DATABASE_HOST = 'sql101.epizy.com';
-$DATABASE_USER = 'epiz_26371947';
-$DATABASE_PASS = 'TGTmRdu3SjSgFf';
-$DATABASE_NAME = 'epiz_26371947_phplogin';
-// Try and connect using the info above.
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-if (mysqli_connect_errno()) {
-	// If there is an error with the connection, stop the script and display the error.
-	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
-// First we check if the email and code exists...
+include_once('config_users.php');
+//Hier wird geschaut ob die eingegebene E-Mail Adresse bereits existiert
 if (isset($_GET['email'], $_GET['code'])) {
 	if ($stmt = $con->prepare('SELECT * FROM accounts WHERE email = ? AND activation_code = ?')) {
 		$stmt->bind_param('ss', $_GET['email'], $_GET['code']);
 		$stmt->execute();
-		// Store the result so we can check if the account exists in the database.
+		// Daten werden gespeichert um zu sehen ob dieses Account existiert
 		$stmt->store_result();
 		if ($stmt->num_rows > 0) {
-			// Account exists with the requested email and code.
+			// Account existiert mit der gleichen E-Mail und dem gleichen Code
 			if ($stmt = $con->prepare('UPDATE accounts SET activation_code = ? WHERE email = ? AND activation_code = ?')) {
-				// Set the new activation code to 'activated', this is how we can check if the user has activated their account.
+				// Aktivierungscode wird auf activated gestellt damit wir später wissen ob die Person ihren/seinen Account aktiviert hat
 				$newcode = 'activated';
 				$stmt->bind_param('sss', $newcode, $_GET['email'], $_GET['code']);
 				$stmt->execute();
