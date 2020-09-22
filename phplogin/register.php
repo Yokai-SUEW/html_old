@@ -1,8 +1,7 @@
 <?php
 include_once('config_users.php');
-// Now we check if the data was submitted, isset() function will check if the data exists.
+
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
-	// Could not get the data that should have been sent.
 	exit('Please complete the registration form!');
 }
 // Hier wird geschaut ob alle Felder richtig befüllt sind. 
@@ -29,9 +28,9 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 		// Falls der User schon existiert wird das Angezeigt!
 		echo 'Username exists, please choose another!';
 	} else {
-		// Username doesnt exists, insert new account
+		// User existiert nicht deshalb wird ein neuer User erstellt
         if ($stmt = $con->prepare('INSERT INTO accounts (username, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
-	// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
+	// Passwörter werden in der Datenbank nicht als Clear Text gespeichert. Sie werden mit BCrypt gehasht.
 	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 	$uniqid = uniqid();
     $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);

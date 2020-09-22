@@ -1,15 +1,14 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
+// Hier wird nachgeschaut ob der User angemeldet ist... 
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
 include_once('config_users.php');
-// We don't have the password or email info stored in sessions so instead we can get the results from the database.
+// Die E-Mails und die Passwörter werden nicht in einer Session gespeichert deshalb holen wir diese aus der Datenbank.
 $stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
-// In this case we can use the account ID to get the account info.
+// Wir nutzen einfach die Session ID um die Informationen zu bekommen.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
 $stmt->bind_result($password, $email);
@@ -26,6 +25,7 @@ $stmt->close();
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
 	<body class="loggedin">
+	<!-- Unsere Navigationbar ist in einer externen File gespeichert somit müssen wir nicht jedes mal die Navigationbar eintippen -->
 	<? include_once('header.php'); ?>
 		<div class="content">
 			<h2>Profil von <?=$_SESSION['name']?></h2>
