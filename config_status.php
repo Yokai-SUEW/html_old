@@ -1,8 +1,8 @@
 <?php
-$DATABASE_HOST = 'sql101.epizy.com';
-$DATABASE_USER = 'epiz_26371947';
-$DATABASE_PASS = 'TGTmRdu3SjSgFf';
-$DATABASE_NAME = 'epiz_26371947_phplogin';
+$DATABASE_HOST = 'sql2.freemysqlhosting.net';
+$DATABASE_USER = 'sql2367052';
+$DATABASE_PASS = 'bF1!kD6!';
+$DATABASE_NAME = 'sql2367052';
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {

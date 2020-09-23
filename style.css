@@ -263,3 +263,13 @@ body {
 	position:relative;
 	top:1px;
 }
+
+/* STATUS STYLES */
+
+.tempStatus {
+    width: 50%;
+}
+
+.humidityStatus {
+    width: 50%;
+}
