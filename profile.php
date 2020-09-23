@@ -26,7 +26,14 @@ $stmt->close();
 	</head>
 	<body class="loggedin">
 	<!-- Unsere Navigationbar ist in einer externen File gespeichert somit müssen wir nicht jedes mal die Navigationbar eintippen -->
-	<? include_once('header.php'); ?>
+			<nav class="navtop">
+			<div>
+                <h1>Yokai Serverüberwachung</h1>
+                <a href="status.php"><i class="fa fa-server" aria-hidden="true"></i>Status</a>
+				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
 		<div class="content">
 			<h2>Profil von <?=$_SESSION['name']?></h2>
 			<div>
