@@ -5,14 +5,6 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
-
-include_once('config_status.php');
-
-$stmt = $con->prepare('SELECT id, temperatur, luftfeuchtigkeit, last_ssh_login, current_ssh_login, current_xrdp_connections FROM status');
-$stmt->execute();
-$stmt->bind_result($id, $temperatur, $luftfeuchtigkeit, $last_ssh_login, $current_ssh_login, $current_xrdp_connections);
-$stmt->fetch();
-$stmt->close();
 ?>
 
 <!DOCTYPE html>
@@ -36,12 +28,30 @@ $stmt->close();
             <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<p>> <?= $temperatur?></p>		
+				<?
+				include_once('config_status.php');
+				$result = mysqli_query($con, "SELECT * FROM status");
+				
+				echo "<table border='1'>
+				<tr>
+				<th>C°</th>
+				</tr>";
+
+				while($row = mysqli_fetch_array($result))
+				{
+					echo "<tr>";
+					echo "<td>" .$row[] . "</td>";
+					echo "</tr>";
+				}
+				echo "</table>";
+
+				mysqli_close($con);
+				?>
 			</div>
 			<div class="humidityStatus">
 			<h2>Luftfeuchtigkeit</h2>
 			<p>> <?= $luftfeuchtigkeit?></p>
 			</div>
-        </div>
+		</div>
         </body>
 </html>
