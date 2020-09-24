@@ -32,15 +32,12 @@ if (!isset($_SESSION['loggedin'])) {
 				include_once('config_status.php');
 				$result = mysqli_query($con, "SELECT * FROM status");
 				
-				echo "<table border='1'>
-				<tr>
-				<th>C°</th>
-				</tr>";
+				echo "<table border='1'>";
 
 				while($row = mysqli_fetch_array($result))
 				{
 					echo "<tr>";
-					echo "<td>" .$row[] . "</td>";
+					echo "<td>" .$row['temperatur'] . "</td>";
 					echo "</tr>";
 				}
 				echo "</table>";
