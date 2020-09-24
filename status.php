@@ -30,7 +30,7 @@ if (!isset($_SESSION['loggedin'])) {
 				<h2>Temperatur</h2>
 				<?
 				include_once('config_status.php');
-				$result = mysqli_query($con, "SELECT * FROM status");
+				$result = mysqli_query($con, "SELECT temperatur FROM status");
 				
 				echo "<table border='1'>";
 
