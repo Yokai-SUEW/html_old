@@ -35,9 +35,11 @@ $stmt->close();
         <div class="content">
             <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
 			<div class="tempStatus">
+				<h2>Temperatur</h2>
 				<p>> <?= $temperatur?></p>		
 			</div>
 			<div class="humidityStatus">
+			<h2>Luftfeuchtigkeit</h2>
 			<p>> <?= $luftfeuchtigkeit?></p>
 			</div>
         </div>
