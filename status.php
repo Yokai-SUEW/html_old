@@ -28,7 +28,7 @@ if (!isset($_SESSION['loggedin'])) {
             <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<?
+				<?php
 				include_once('config_status.php');
 				$result = mysqli_query($con, "SELECT temperatur FROM status");
 				
