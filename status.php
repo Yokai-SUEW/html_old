@@ -5,6 +5,12 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
+
+include_once('config_status.php');
+$result = mysqli_query($con, "SELECT id, temperatur, luftfeuchtigkeit, last_ssh_login, current_ssh_login, current_xrdp_connections FROM status");
+$result->bind_result($id, $temperatur, $luftfeuchtigkeit, $last_ssh_login, $current_ssh_login, $current_xrdp_connections);
+$result->fetch();
+
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +25,7 @@ if (!isset($_SESSION['loggedin'])) {
 			<nav class="navtop">
 			<div>
                 <h1>Yokai Serverüberwachung</h1>
+				<a href="cctv.html"><i class="fa fa-video-camera" aria-hidden="true"></i>CCTV</a>
                 <a href="status.php"><i class="fa fa-server" aria-hidden="true"></i>Status</a>
 				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
@@ -28,26 +35,11 @@ if (!isset($_SESSION['loggedin'])) {
             <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<?php
-				include_once('config_status.php');
-				$result = mysqli_query($con, "SELECT temperatur FROM status");
-				
-				echo "<table border='1'>";
-
-				while($row = mysqli_fetch_array($result))
-				{
-					echo "<tr>";
-					echo "<td>" .$row['temperatur'] . "</td>";
-					echo "</tr>";
-				}
-				echo "</table>";
-
-				mysqli_close($con);
-				?>
+				<p>> <?= $temperatur?></p>
 			</div>
 			<div class="humidityStatus">
-			<h2>Luftfeuchtigkeit</h2>
-			<p>> <?= $luftfeuchtigkeit?></p>
+				<h2>Luftfeuchtigkeit</h2>
+				<p>> <?= $luftfeuchtigkeit?></p>
 			</div>
 		</div>
         </body>

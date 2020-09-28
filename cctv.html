@@ -1,21 +1,13 @@
-<?php
-session_start();
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
-	exit;
-}
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Home Page</title>
+		<title>Profil von <?=$_SESSION['name']?></title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
 	<body class="loggedin">
-				<nav class="navtop">
+			<nav class="navtop">
 			<div>
                 <h1>Yokai Serverüberwachung</h1>
 				<a href="cctv.html"><i class="fa fa-video-camera"></i>CCTV</a>
@@ -24,9 +16,9 @@ if (!isset($_SESSION['loggedin'])) {
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
         </nav>
-		<div class="content">
-			<h2>Home Page</h2>
-			<p>Herzlich Willkommen, <?=$_SESSION['name']?>!</p>
-		</div>
-	</body>
+        <div class="content">
+            <video autoplay="true" href="rtsp://cam01:292726242528@yokai.ddns.net:2323/">
+            </video>
+        </div>
+    </body>
 </html>
