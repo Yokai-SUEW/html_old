@@ -93,7 +93,7 @@ jeweiligen Element vorgenommen wenn man mit dem Cursor drüber fährt*/
 	color: red;
 	font-weight: normal;
 }
-.navtop div a {
+.navtop div a i {
 	padding: 0 20px;
 	text-decoration: none;
 	color: #ba2323;
@@ -122,7 +122,6 @@ body.loggedin {
 .content > p, .content > div {
 	box-shadow: 0 0 5px 0 rgba(255, 0, 0, 2);
 	margin: 25px 0;
-    padding: 25px;
     color: #ffffff;
 	background-color: #201f1f;
 }
@@ -267,9 +266,11 @@ body {
 /* STATUS STYLES */
 
 .tempStatus {
+    float: left;
     width: 50%;
 }
 
 .humidityStatus {
+    float: right;
     width: 50%;
 }

@@ -7,17 +7,17 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 include_once('config_status.php');
-$result = mysqli_query($con, "SELECT id, temperatur, luftfeuchtigkeit, last_ssh_login, current_ssh_login, current_xrdp_connections FROM status");
+$result = $con->prepare('SELECT id, temperatur, luftfeuchtigkeit, last_ssh_login, current_ssh_login, current_xrdp_connections FROM status');
 $result->bind_result($id, $temperatur, $luftfeuchtigkeit, $last_ssh_login, $current_ssh_login, $current_xrdp_connections);
 $result->fetch();
-
+$result->close();
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Profil von <?=$_SESSION['name']?></title>
+		<title>Profil</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
@@ -25,8 +25,8 @@ $result->fetch();
 			<nav class="navtop">
 			<div>
                 <h1>Yokai Serverüberwachung</h1>
-				<a href="cctv.html"><i class="fa fa-video-camera" aria-hidden="true"></i>CCTV</a>
-                <a href="status.php"><i class="fa fa-server" aria-hidden="true"></i>Status</a>
+				<a href="cctv.html"><i class="fa fa-video-camera"></i>CCTV</a>
+                <a href="status.php"><i class="fa fa-server"></i>Status</a>
 				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
@@ -35,7 +35,7 @@ $result->fetch();
             <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<p>> <?= $temperatur?></p>
+				<p>> <?= $temperatur?>C &deg;</p>
 			</div>
 			<div class="humidityStatus">
 				<h2>Luftfeuchtigkeit</h2>
