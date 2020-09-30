@@ -37,7 +37,7 @@ $result->close();
             <h2>Server Status</h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<?php foreach ($result->query($con) as $row) : ?>
+				<?php while($row = mysqli_fetch_object($result)) {?>
 				<table>
 					<thead>
 					<tr>
@@ -47,8 +47,8 @@ $result->close();
 					</thead>
 					<tbody>
 					<tr>
-						<td><?=$row['temperatur']?></td>
-						<td><?=$row['zeitpunkt']?></td>
+						<td><?php echo $row['temperatur']?></td>
+						<td><?php echo $row['zeitpunkt']?></td>
 					</tr>	
 					</tbody>
 				</table>
@@ -63,12 +63,12 @@ $result->close();
 					</thead>
 					<tbody>
 					<tr>
-						<td><?=$row['luftfeuchtigkeit']?></td>
-						<td><?=$row['zeitpunkt']?></td>
+						<td><?php echo $row['luftfeuchtigkeit']?></td>
+						<td><?php echo $row['zeitpunkt']?></td>
 					</tr>	
 					</tbody>
 				</table>
-				<?php endforeach; ?>
+				<?php }?>
 			</div>
 		</div>
         </body>
