@@ -11,7 +11,7 @@ $stmt = $con->prepare('SELECT password, email, username FROM accounts WHERE id =
 // Wir nutzen einfach die Session ID um die Informationen zu bekommen.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email, $_SESSION['name']);
+$stmt->bind_result($password, $email, $name);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -20,7 +20,7 @@ $stmt->close();
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Profil von <?=$_SESSION['name']?></title>
+		<title>Profil von <?=$name?></title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
