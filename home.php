@@ -18,15 +18,21 @@ if (!isset($_SESSION['loggedin'])) {
 				<nav class="navtop">
 			<div>
                 <h1>Yokai Serverüberwachung</h1>
-				<a href="cctv.html"><i class="fa fa-video-camera"></i>CCTV</a>
-                <a href="status.php"><i class="fa fa-server"></i>Status</a>
-				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+				<a href="cctv.html"><i class="fa fa-video-camera" aria-hidden="true"></i>CCTV</a>
+                <a href="status.php"><i class="fa fa-server" aria-hidden="true"></i>Status</a>
+				<a href="profile.php"><i class="fas fa-user-circle" aria-hidden="true"></i>Profile</a>
+				<a href="logout.php"><i class="fas fa-sign-out-alt" aria-hidden="true"></i>Logout</a>
 			</div>
         </nav>
 		<div class="content">
 			<h2>Home Page</h2>
 			<p>Herzlich Willkommen, <?=$_SESSION['name']?>!</p>
+			<p>
+			<h3>Wozu dient Yokai?</h3>
+			Mit Yokai könnt ihr euren Serverschrank über einer Kamera und einem Magnet Sensor überwachen.
+
+			Wenn du weitere Fragen hast kannst du uns <a href="mailto:yokai.noreply@gmail.com" id="mail">hier</a> kontaktieren!
+			</p>
 		</div>
 	</body>
 </html>
