@@ -270,38 +270,14 @@ body {
     float: left;
     width: 500px;
     overflow: auto; 
-    text-align:justify;
+    text-align: center;
 }
 
 .humidityStatus {
     float: right;
     width: 500px;
     overflow: auto; 
-    text-align:justify;
-}
-
-.tempStatus > table > thead > th {
-        width: 500px;
-        text-align: center;
-        color: white;
-}
-
-.tempStatus > table > tbody > td {
-    width: 500px;
     text-align: center;
-    color: white;
-}
-
-.humidityStatus > table > thead > th {
-    width: 500px;
-    text-align: center;
-    color: white;
-}
-
-.humidityStatus > table > tbody > td {
-width: 500px;
-text-align: center;
-color: white;
 }
 
 .trennStrich {
