@@ -280,7 +280,32 @@ body {
     text-align:justify;
 }
 
+.tempStatus > table > thead > th {
+        width: 500px;
+        text-align: center;
+        color: white;
+}
+
+.tempStatus > table > tbody > td {
+    width: 500px;
+    text-align: center;
+    color: white;
+}
+
+.humidityStatus > table > thead > th {
+    width: 500px;
+    text-align: center;
+    color: white;
+}
+
+.humidityStatus > table > tbody > td {
+width: 500px;
+text-align: center;
+color: white;
+}
+
 .trennStrich {
     color: red;
     font-weight: bold; 
 }
+
