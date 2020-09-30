@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 include_once('config_status.php');
-$result = $con->prepare("SELECT id, temperatur, luftfeuchtigkeit, timestamp FROM 'dht11'");
+$result = $con->prepare('SELECT * FROM `dht11`');
 $result->bind_result($id, $temperatur, $luftfeuchtigkeit, $timestamp);
 $result->fetch();
 $result->close();
