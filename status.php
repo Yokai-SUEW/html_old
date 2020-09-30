@@ -66,7 +66,7 @@ echo "<table>";
 while($row = mysqli_fetch_object($result))
 {
   				echo "<tr>";
-  				echo "<td>",$row->luftfeuchtigkeit,"<inline class=",'trennStrich',">|</inline>",$row->zeitpunkt,"</td>";
+  				echo "<td>",$row->luftfeuchtigkeit,"<inline class=","trennStrich",">|</inline>",$row->zeitpunkt,"</td>";
 				 echo "</tr>";
 }
 				echo "</table>";
