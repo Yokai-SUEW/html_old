@@ -27,12 +27,14 @@ if (!isset($_SESSION['loggedin'])) {
 		<div class="content">
 			<h2>Home Page</h2>
 			<p>Herzlich Willkommen, <?=$_SESSION['name']?>!</p>
-			<p>
+		<div>
 			<h3>Wozu dient Yokai?</h3>
+			<p>
 			Mit Yokai könnt ihr euren Serverschrank über einer Kamera und einem Magnet Sensor überwachen.
 
 			Wenn du weitere Fragen hast kannst du uns <a href="mailto:yokai.noreply@gmail.com" id="mail">hier</a> kontaktieren!
 			</p>
+		</div>
 		</div>
 	</body>
 </html>
