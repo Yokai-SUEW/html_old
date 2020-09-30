@@ -27,49 +27,49 @@ if (!isset($_SESSION['loggedin'])) {
 			</div>
 		</nav>
         <div class="content">
-            <h2>Server Status</h2>
-			<div class="tempStatus">
-				<h2>Temperatur</h2>
-				<?php
+		<h2>Server Status</h2>
+		<div class="tempStatus">
+		<h2>Temperatur</h2>
+<?php
 
-include_once('config_status.php');
-$result = $con->prepare('SELECT id, temperatur, luftfeuchtigkeit, zeitpunkt FROM dht11');
-$result->execute();
-$result->bind_result($id, $temperatur, $luftfeuchtigkeit, $zeitpunkt);
-$result->fetch();
-$result->close();
+require_once('config_status.php');
 
-echo "<table>";
+$sql = "SELECT id, temperatur, zeitpunkt FROM dht11";
+$result = mysqli_query($conn, $sql);
 
-while($row = mysqli_fetch_object($result))
-{
-  				echo "<tr>";
-  				echo "<td>",$row->temperatur,$row->zeitpunkt,"</td>";
-				 echo "</tr>";
+if (mysqli_num_rows($result) > 0) {
+	while($row = mysqli_fetch_assoc($result)) {
+		echo "<table>";
+		echo "<tbody>";
+		echo "<tr>";
+			echo "<td> > " . $row["temperatur"] . "|" . $row["zeitpunkt"] . "</td>";
+		echo "</tr>";
+		echo "</tbody>";
+		echo "</table>";
+	}
 }
-				echo "</table>";
-?>
+		?>
 			</div>
 			<div class="humidityStatus">
 				<h2>Luftfeuchtigkeit</h2>
 				<?php
 
-include_once('config_status.php');
-$result = $con->prepare('SELECT id, temperatur, luftfeuchtigkeit, zeitpunkt FROM dht11');
-$result->execute();
-$result->bind_result($id, $temperatur, $luftfeuchtigkeit, $zeitpunkt);
-$result->fetch();
-$result->close();
+require_once('config_status.php');
 
-echo "<table>";
+$sql = "SELECT id, luftfeuchtigkeit, zeitpunkt FROM dht11";
+$result = mysqli_query($conn, $sql);
 
-while($row = mysqli_fetch_object($result))
-{
-  				echo "<tr>";
-  				echo "<td>",$row->luftfeuchtigkeit,$row->zeitpunkt,"</td>";
-				 echo "</tr>";
+if (mysqli_num_rows($result) > 0) {
+	while($row = mysqli_fetch_assoc($result)) {
+		echo "<table>";
+		echo "<tbody>";
+		echo "<tr>";
+			echo "<td> > " . $row["luftfeuchtigkeit"] . "|" . $row["zeitpunkt"] . "</td>";
+		echo "</tr>";
+		echo "</tbody>";
+		echo "</table>";
+	}
 }
-				echo "</table>";
 ?>
 			</div>
 		</div>
