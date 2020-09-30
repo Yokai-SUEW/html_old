@@ -19,10 +19,10 @@ if (!isset($_SESSION['loggedin'])) {
 				<nav class="navtop">
 			<div>
                 <h1>Yokai Serverüberwachung</h1>
-				<a href="cctv.html"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i>CCTV</a>
-                <a href="status.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i>Status</a>
-				<a href="profile.php"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Profile</a>
-				<a href="logout.php"><i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i>Logout</a>
+				<a href="cctv.html"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> CCTV</a>
+                <a href="status.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> Status</a>
+				<a href="profile.php"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i> Profile</a>
+				<a href="logout.php"><i class="fas fa-sign-out-alt fa-fw" aria-hidden="true"></i> Logout</a>
 			</div>
         </nav>
 		<div class="content">
