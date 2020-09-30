@@ -269,14 +269,18 @@ body {
 .tempStatus {
     float: left;
     width: 500px;
+    overflow: auto; 
+    text-align:justify;
 }
 
 .humidityStatus {
     float: right;
     width: 500px;
+    overflow: auto; 
+    text-align:justify;
 }
 
 .trennStrich {
     color: red;
-    font-weight: bold;
+    font-weight: bold; 
 }

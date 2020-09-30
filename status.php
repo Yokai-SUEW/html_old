@@ -12,6 +12,8 @@ $result->execute();
 $result->bind_result($id, $temperatur, $luftfeuchtigkeit, $zeitpunkt);
 $result->fetch();
 $result->close();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -37,38 +39,11 @@ $result->close();
             <h2>Server Status</h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<?php while($row = mysqli_fetch_object($result)) {?>
-				<table>
-					<thead>
-					<tr>
-						<th>Temperatur</th>
-						<th>Zeitpunkt</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td><?php echo $row['temperatur']?></td>
-						<td><?php echo $row['zeitpunkt']?></td>
-					</tr>	
-					</tbody>
-				</table>
+				
 			</div>
 			<div class="humidityStatus">
-			<table>
-					<thead>
-					<tr>
-						<th>Luftfeuchtigkeit</th>
-						<th>Zeitpunkt</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td><?php echo $row['luftfeuchtigkeit']?></td>
-						<td><?php echo $row['zeitpunkt']?></td>
-					</tr>	
-					</tbody>
-				</table>
-				<?php }?>
+				<h2>Luftfeuchtigkeit</h2>
+
 			</div>
 		</div>
         </body>
