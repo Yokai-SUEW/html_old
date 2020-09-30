@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 include_once('config_status.php');
-$result = $con->prepare('SELECT id, temperatur, luftfeuchtigkeit, zeitpunkt FROM dht11');
+$result = $conn->prepare('SELECT id, temperatur, luftfeuchtigkeit, zeitpunkt FROM dht11');
 $result->execute();
 $result->bind_result($id, $temperatur, $luftfeuchtigkeit, $zeitpunkt);
 $result->fetch();
@@ -37,9 +37,9 @@ $result->close();
             <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
+				<?php foreach ($con->query($result) as $row) : ?>
 				<table>
 					<thead>
-					<?php foreach ($con->query($result) as $row) : ?>
 					<tr>
 						<th>Temperatur</th>
 						<th>Zeitpunkt</th>
@@ -68,6 +68,7 @@ $result->close();
 					</tr>	
 					</tbody>
 				</table>
+				<?php endforeach; ?>
 			</div>
 		</div>
         </body>
