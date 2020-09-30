@@ -53,11 +53,11 @@ $stmt->close();
 						<td><a href="mailto:$email" id="mail"><?=$email?></a></td>
                     </tr>
                     <tr>
-                        <td>IP-Adresse</td>
+                        <td>IP-Adresse:</td>
                         <td><?php echo $_SERVER["REMOTE_ADDR"];?></td>
                     </tr>
                     <tr>
-                        <td>Gerät::</td>
+                        <td>Gerät:</td>
                         <td><?php $host = gethostbyaddr($_SERVER["REMOTE_ADDR"]);
                             echo $host;?></td>
                     </tr>
