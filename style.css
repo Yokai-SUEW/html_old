@@ -267,10 +267,15 @@ body {
 
 .tempStatus {
     float: left;
-    width: 50%;
+    width: 500px;
 }
 
 .humidityStatus {
     float: right;
-    width: 50%;
+    width: 500px;
+}
+
+.trennStrich {
+    color: red;
+    font-weight: bold;
 }

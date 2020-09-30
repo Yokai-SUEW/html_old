@@ -7,8 +7,8 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 include_once('config_status.php');
-$result = $con->prepare('SELECT id, temperatur, luftfeuchtigkeit, last_ssh_login, current_ssh_login, current_xrdp_connections FROM status');
-$result->bind_result($id, $temperatur, $luftfeuchtigkeit, $last_ssh_login, $current_ssh_login, $current_xrdp_connections);
+$result = $con->prepare('SELECT id, temperatur, luftfeuchtigkeit, timestamp FROM dht11');
+$result->bind_result($id, $temperatur, $luftfeuchtigkeit, $timestamp);
 $result->fetch();
 $result->close();
 ?>
@@ -35,11 +35,11 @@ $result->close();
             <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<p>> <?= $temperatur?>C &deg;</p>
+				<p>> <?= $temperatur?>C &deg; <inline class="trennStrich">|</inline> <?= $timestamp?></p>
 			</div>
 			<div class="humidityStatus">
 				<h2>Luftfeuchtigkeit</h2>
-				<p>> <?= $luftfeuchtigkeit?></p>
+				<p>> <?= $luftfeuchtigkeit?>% <inline class="trennStrich">|</inline> <?= $timestamp?></p>
 			</div>
 		</div>
         </body>
