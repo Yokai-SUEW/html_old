@@ -20,6 +20,7 @@ $result->close();
 		<title>Profil</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="loggedin">
 			<nav class="navtop">
