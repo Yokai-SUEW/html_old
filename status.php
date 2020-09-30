@@ -39,15 +39,20 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
-		echo "<p>";
 		echo "<table>";
+		echo "<thead>";
+		echo "<tr>";
+			echo "<th>" . "Temperatur" . "</th>";
+			echo "<th>" . "Datum/Zeit" . "</th>";
+		echo "</tr>";
+		echo "</thead>";
 		echo "<tbody>";
 		echo "<tr>";
-			echo "<td> > " . $row["temperatur"] . " | " . $row["zeitpunkt"] . "</td>";
+			echo "<td>" . $row["temperatur"] . "</td>";
+			echo "<td>" . $row["zeitpunkt"] . "</td>";
 		echo "</tr>";
 		echo "</tbody>";
 		echo "</table>";
-		echo "</p>";
 	}
 }
 		?>
@@ -63,15 +68,20 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
-		echo "<p>";
 		echo "<table>";
+		echo "<thead>";
+		echo "<tr>";
+			echo "<th>" . "Luftfeuchtigkeit" . "</th>";
+			echo "<th>" . "Datum/Zeit" . "</th>";
+		echo "</tr>";
+		echo "</thead>";
 		echo "<tbody>";
 		echo "<tr>";
-			echo "<td> > " . $row["luftfeuchtigkeit"] . " | " . $row["zeitpunkt"] . "</td>";
+			echo "<td>" . $row["luftfeuchtigkeit"] . "</td>";
+			echo "<td>" . $row["zeitpunkt"] . "</td>";
 		echo "</tr>";
 		echo "</tbody>";
 		echo "</table>";
-		echo "</p>";
 	}
 }
 ?>
