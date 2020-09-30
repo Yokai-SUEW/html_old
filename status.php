@@ -34,10 +34,10 @@ $result->close();
 			</div>
 		</nav>
         <div class="content">
-            <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
+            <h2>Server Status</h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<?php foreach ($con->query($result) as $row) : ?>
+				<?php foreach ($result->query($con) as $row) : ?>
 				<table>
 					<thead>
 					<tr>
