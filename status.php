@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 include_once('config_status.php');
-$result = $con->prepare('SELECT id, temperatur, luftfeuchtigkeit, zeitpunkt FROM dht11');
+$result = $conn->prepare('SELECT id, temperatur, luftfeuchtigkeit, zeitpunkt FROM dht11');
 $result->execute();
 $result->bind_result($id, $temperatur, $luftfeuchtigkeit, $zeitpunkt);
 $result->fetch();
@@ -37,11 +37,37 @@ $result->close();
             <h2>Server Status <i class="fa fa-server" aria-hidden="true"></i></h2>
 			<div class="tempStatus">
 				<h2>Temperatur</h2>
-				<p>> <?= $temperatur?>C &deg; <inline class="trennStrich">|</inline> <?= $zeitpunkt?></p>
+				<table>
+					<thead>
+					<?php foreach ($con->query($result) as $row) : ?>
+					<tr>
+						<th>Temperatur</th>
+						<th>Zeitpunkt</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><?=$row['temperatur']?></td>
+						<td><?=$row['zeitpunkt']?></td>
+					</tr>	
+					</tbody>
+				</table>
 			</div>
 			<div class="humidityStatus">
-				<h2>Luftfeuchtigkeit</h2>
-				<p>> <?= $luftfeuchtigkeit?>% <inline class="trennStrich">|</inline> <?= $zeitpunkt?></p>
+			<table>
+					<thead>
+					<tr>
+						<th>Luftfeuchtigkeit</th>
+						<th>Zeitpunkt</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><?=$row['luftfeuchtigkeit']?></td>
+						<td><?=$row['zeitpunkt']?></td>
+					</tr>	
+					</tbody>
+				</table>
 			</div>
 		</div>
         </body>
