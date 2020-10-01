@@ -30,6 +30,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<h2>Server Status</h2>
 		<div class="tempStatus">
 		<h2>Temperatur</h2>
+		<p>
 <?php
 
 require_once('config_status.php');
@@ -56,9 +57,11 @@ if (mysqli_num_rows($result) > 0) {
 	}
 }
 		?>
+		</p>
 			</div>
 			<div class="humidityStatus">
 				<h2>Luftfeuchtigkeit</h2>
+				<p>
 				<?php
 
 require_once('config_status.php');
@@ -85,6 +88,7 @@ if (mysqli_num_rows($result) > 0) {
 	}
 }
 ?>
+			</p>
 			</div>
 		</div>
         </body>
