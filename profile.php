@@ -21,7 +21,8 @@ $stmt->close();
 	<head>
 		<meta charset="utf-8">
 		<title>Profil von <?=$name?></title>
-		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="navbarStyles.css" rel="stylesheet" type="text/css">
+		<link href="mainStyles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
 	</head>

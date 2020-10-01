@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    background-color: #201f1f;
+}
+
+body.loggedin {
+	background-color: #201f1f;
+}
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid red;
+	color: #ba2323;
+}
+.content > p, .content > div {
+	box-shadow: 0 0 5px 0 rgba(255, 0, 0, 2);
+    margin: 25px 0;
+    padding: 25px;
+    color: #ffffff;
+	background-color: #201f1f;
+}
+.content > p table td, .content > div table td {
+    padding: 5px;
+    color: #ffffff;
+}
+.content > p table td:first-child, .content > div table td:first-child {
+	font-weight: bold;
+	color: #ba2323;
+	padding-right: 15px;
+}
+.content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+#mail {
+    color: #ffffff;
+}
+.titel {
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    color: #ffffff;
+    border: 1px solid red;
+    border-radius: 1mm;
+    box-shadow: 0 0 9px 0 rgba(255, 0, 0, 1);
+}
+
+/*ERROR STYLES*/
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: none;
+    padding: 200px;
+}
+
+.error > h2 {
+    font-size: 3em;
+}
+
+.fa fa-exclamation-triangle {
+    font-size: 3em;
+}
+
+.error-button {
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #b23e35;
+    text-align: center;
+}
+.error-button:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	background-color:#ce0100;
+}
+.error-button:active {
+	position:relative;
+	top:1px;
+}
+
+

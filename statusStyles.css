@@ -1,0 +1,27 @@
+.tempStatus {
+    float: left;
+    width: 500px;
+    overflow: auto; 
+    text-align: center;
+}
+
+.humidityStatus {
+    float: right;
+    width: 500px;
+    overflow: auto; 
+    text-align: center;
+}
+
+.trennStrich {
+    color: red;
+    font-weight: bold; 
+}
+
+.statusTable thead tr {
+    width: 250px;
+    font-weight: bold;
+}
+
+.statusTable tbody tr {
+    width: 250px;
+}

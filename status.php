@@ -12,7 +12,9 @@ if (!isset($_SESSION['loggedin'])) {
 	<head>
 		<meta charset="utf-8">
 		<title>Profil</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="navbarStyles.css" rel="stylesheet" type="text/css">
+		<link href="mainStyles.css" rel="stylesheet" type="text/css">
+		<link href="statusStyles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
 	</head>
@@ -40,7 +42,7 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
-		echo "<table class='statusTable'>";
+		echo "<table>";
 		echo "<thead>";
 		echo "<tr>";
 			echo "<th>" . "Temperatur" . "</th>";
@@ -71,7 +73,7 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
-		echo "<table class='statusTable'>";
+		echo "<table>";
 		echo "<thead>";
 		echo "<tr>";
 			echo "<th>" . "Luftfeuchtigkeit" . "</th>";
