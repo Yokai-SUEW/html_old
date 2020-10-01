@@ -28,9 +28,10 @@ $stmt->close();
 	</head>
 	<body class="loggedin">
 	<!-- Unsere Navigationbar ist in einer externen File gespeichert somit müssen wir nicht jedes mal die Navigationbar eintippen -->
-			<nav class="navtop">
+	<nav class="navtop">
 			<div>
-                <h1>Yokai Serverüberwachung</h1>
+				<h1>Yokai Serverüberwachung</h1>
+				<a href="home.php"><i class="fas fa-home fa-lg" aria-hidden="true"></i></a>
 				<a href="cctv.html"><i class="fa fa-video-camera fa-lg" aria-hidden="true"></i></a>
                 <a href="status.php"><i class="fa fa-server fa-lg" aria-hidden="true"></i></a>
 				<a href="profile.php"><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>

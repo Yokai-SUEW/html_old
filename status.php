@@ -21,13 +21,14 @@ if (!isset($_SESSION['loggedin'])) {
 	<body class="loggedin">
 			<nav class="navtop">
 			<div>
-                <h1>Yokai Serverüberwachung</h1>
+				<h1>Yokai Serverüberwachung</h1>
+				<a href="home.php"><i class="fas fa-home fa-lg" aria-hidden="true"></i></a>
 				<a href="cctv.html"><i class="fa fa-video-camera fa-lg" aria-hidden="true"></i></a>
                 <a href="status.php"><i class="fa fa-server fa-lg" aria-hidden="true"></i></a>
 				<a href="profile.php"><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
 				<a href="logout.php"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
 			</div>
-		</nav>
+        </nav>
         <div class="content">
 		<h2>Server Status</h2>
 		<div class="tempStatus">
