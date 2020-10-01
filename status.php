@@ -39,7 +39,7 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
-		echo "<table>";
+		echo "<table class='statusTable'>";
 		echo "<thead>";
 		echo "<tr>";
 			echo "<th>" . "Temperatur" . "</th>";
@@ -68,7 +68,7 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
-		echo "<table>";
+		echo "<table class='statusTable'>";
 		echo "<thead>";
 		echo "<tr>";
 			echo "<th>" . "Luftfeuchtigkeit" . "</th>";

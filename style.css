@@ -280,24 +280,16 @@ body {
     text-align: center;
 }
 
-.tempStatus table thead tr th {
-    column-width: 250px;
-}
-
-.tempStatus table tbody tr td {
-    column-width: 250px;
-}
-
-.humidityStatus table thead tr th {
-    column-width: 250px;
-}
-
-.humidityStatus table tbody tr td {
-    column-width: 250px;
-}
-
 .trennStrich {
     color: red;
     font-weight: bold; 
 }
 
+.statusTable thead tr {
+    width: 250px;
+    font-weight: bold;
+}
+
+.statusTable tbody tr {
+    width: 250px;
+}
