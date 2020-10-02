@@ -52,7 +52,7 @@ if (mysqli_num_rows($result) > 0) {
 		echo "</thead>";
 		echo "<tbody>";
 		echo "<tr>";
-			echo "<td>" . $row["temperatur"] . "</td>";
+			echo "<td>" . $row["temperatur"] . "C&deg;" . "</td>";
 			echo "<td>" . $row["zeitpunkt"] . "</td>";
 		echo "</tr>";
 		echo "</tbody>";
@@ -83,7 +83,7 @@ if (mysqli_num_rows($result) > 0) {
 		echo "</thead>";
 		echo "<tbody>";
 		echo "<tr>";
-			echo "<td>" . $row["luftfeuchtigkeit"] . "</td>";
+			echo "<td>" . $row["luftfeuchtigkeit"] . "%" . "</td>";
 			echo "<td>" . $row["zeitpunkt"] . "</td>";
 		echo "</tr>";
 		echo "</tbody>";
