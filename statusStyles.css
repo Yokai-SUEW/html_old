@@ -17,11 +17,20 @@
     font-weight: bold; 
 }
 
-.statusTable thead tr {
-    width: 250px;
-    font-weight: bold;
+table { 
+    border-collapse: collapse; 
 }
 
-.statusTable tbody tr {
+th { 
     width: 250px;
-}
+    text-align: center;
+    font-weight: bold; 
+    Color: red; 
+} 
+
+td { 
+    width: 250px; 
+    text-align:center; 
+    border:1px solid red; 
+    padding:5px 
+} 
