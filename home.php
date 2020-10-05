@@ -35,7 +35,8 @@ if (!isset($_SESSION['loggedin'])) {
 			<h3>Wozu dient Yokai?</h3>
 			<p>
 			Mit Yokai könnt ihr euren Serverschrank über einer Kamera und einem Magnet Sensor überwachen.
-
+</p>
+<p>
 			Wenn du weitere Fragen hast kannst du uns <a href="mailto:yokai.noreply@gmail.com" id="mail">hier</a> kontaktieren!
 			</p>
 		</div>
