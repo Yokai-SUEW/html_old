@@ -23,7 +23,7 @@ if (!isset($_SESSION['loggedin'])) {
 			<div>
 				<h1>Yokai Serverüberwachung</h1>
 				<a href="home.php"><i class="fas fa-home fa-lg" aria-hidden="true"></i></a>
-				<a href="cctv.html"><i class="fa fa-video-camera fa-lg" aria-hidden="true"></i></a>
+				<a href="cctv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
                 <a href="status.php"><i class="fa fa-server fa-lg" aria-hidden="true"></i></a>
 				<a href="profile.php"><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
 				<a href="logout.php"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 require_once('config_status.php');
 
-$sql = "SELECT id, temperatur, zeitpunkt FROM dht11";
+$sql = "SELECT id, temperatur, luftfeuchtigkeit, zeitpunkt FROM dht11";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -68,9 +68,6 @@ if (mysqli_num_rows($result) > 0) {
 				<?php
 
 require_once('config_status.php');
-
-$sql = "SELECT id, luftfeuchtigkeit, zeitpunkt FROM dht11";
-$result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
