@@ -27,8 +27,8 @@ if (!isset($_SESSION['loggedin'])) {
 				<a href="logout.php"><abbr title="Logout"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
 			</div>
 		</nav>
-        <div>
-			<h1>CCTV Bilder</h1>
+        <div class="content">
+			<h2>CCTV Bilder</h2>
            <p>
 		
     	   </p>
