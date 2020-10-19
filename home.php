@@ -21,7 +21,7 @@ if (!isset($_SESSION['loggedin'])) {
 			<div>
 				<h1>Yokai Serverüberwachung</h1>
 				<a href="home.php"><i class="fas fa-home fa-lg" aria-hidden="true"></i></a>
-				<a href="cctv.html"><i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+				<a href="cctv.php"><i class="fa fa-eye fa-lg" aria-hidden="true"></i>
 </a>
                 <a href="status.php"><i class="fa fa-server fa-lg" aria-hidden="true"></i></a>
 				<a href="profile.php"><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
