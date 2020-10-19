@@ -30,7 +30,20 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="content">
 			<h2>CCTV Bilder</h2>
            <p>
-		
+			<table>
+			<thead>
+			<tr>
+				<th>Bild</th>
+				<th>Zeitpunkt</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>TBD</td>
+					<td>TBD</td>
+				</tr>
+			</tbody>
+			</table>	
     	   </p>
         </div>
     </body>
