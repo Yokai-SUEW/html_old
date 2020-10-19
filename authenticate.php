@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('config_users.php');
-// Hier wird geschaut ob die Daten beim Login mitgesendet wurden oder nicht. isset() schaut ob die Daten bereits existieren
+// Hier wird geschaut ob die Daten beim Login mitgesendet wurden oder nicht. isset() schaut ob die Daten vorhanden sind
 if ( !isset($_POST['username'], $_POST['password']) ) {
 	// Daten konnten nicht gefunden werden...
 	exit('Bitte füllen Sie beide Felder aus!');
