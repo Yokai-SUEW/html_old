@@ -38,7 +38,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 require_once('config_status.php');
 
-$sql = "SELECT id, temperatur, luftfeuchtigkeit, zeitpunkt FROM dht11";
+$sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM yokai";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -52,8 +52,8 @@ if (mysqli_num_rows($result) > 0) {
 		echo "</thead>";
 		echo "<tbody>";
 		echo "<tr>";
-			echo "<td>" . $row["temperatur"] . " C&deg;" . "</td>";
-			echo "<td>" . $row["zeitpunkt"] . "</td>";
+			echo "<td>" . $row["Temperatur"] . " C&deg;" . "</td>";
+			echo "<td>" . $row["Datum"] . "</td>";
 		echo "</tr>";
 		echo "</tbody>";
 		echo "</table>";
@@ -80,8 +80,8 @@ if (mysqli_num_rows($result) > 0) {
 		echo "</thead>";
 		echo "<tbody>";
 		echo "<tr>";
-			echo "<td>" . $row["luftfeuchtigkeit"] . " %" . "</td>";
-			echo "<td>" . $row["zeitpunkt"] . "</td>";
+			echo "<td>" . $row["Luftfeuchtigkeit"] . " %" . "</td>";
+			echo "<td>" . $row["Datum"] . "</td>";
 		echo "</tr>";
 		echo "</tbody>";
 		echo "</table>";
