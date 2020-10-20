@@ -38,7 +38,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 require_once('config_status.php');
 
-$sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM yokai";
+$sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
