@@ -22,11 +22,11 @@ if (!isset($_SESSION['loggedin'])) {
 			<nav class="navtop">
 			<div>
 				<h1>Yokai Serverüberwachung</h1>
-				<a href="home.php"><i class="fas fa-home fa-lg" aria-hidden="true"></i></a>
-				<a href="cctv.html"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a>
-                <a href="status.php"><i class="fa fa-server fa-lg" aria-hidden="true"></i></a>
-				<a href="profile.php"><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
-				<a href="logout.php"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
+				<a href="home.php"><abbr title="Home"><i class="fas fa-home fa-lg" aria-hidden="true"></i></abbr></a>
+				<a href="cctv.php"><abbr title="CCTV"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a>
+                <a href="status.php"><abbr title="Server Status"><i class="fa fa-server fa-lg" aria-hidden="true"></i></a>
+				<a href="profile.php"><abbr title="My Profile"><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
+				<a href="logout.php"><abbr title="Logout"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
 			</div>
         </nav>
         <div class="content">
@@ -90,6 +90,9 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 			</p>
 			</div>
+		</div>
+		<div>
+
 		</div>
         </body>
 </html>

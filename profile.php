@@ -62,7 +62,7 @@ $stmt->close();
                     </tr>
                     <tr>
                         <td>Gerät:</td>
-                        <td><?php $host = gethostbyaddr($_SERVER["REMOTE_ADDR"]);
+                        <td><?php $host = gethostbyname();
                             echo $host;?></td>
                     </tr>
 				</table>
