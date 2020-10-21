@@ -46,6 +46,10 @@ if (mysqli_num_rows($result) > 0) {
 		echo "<table>";
 		echo "<tbody>";
 		echo "<tr>";
+			echo "<th>Temperatur</th>";
+			echo "<th>Datum</th>";
+		echo "</tr>";
+		echo "<tr>";
 			echo "<td>" . $row["Temperatur"] . " C&deg;" . "</td>";
 			echo "<td>" . $row["Datum"] . "</td>";
 		echo "</tr>";
@@ -69,13 +73,11 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
 		echo "<table>";
-		echo "<thead>";
-		echo "<tr>";
-			echo "<th>" . "Luftfeuchtigkeit" . "</th>";
-			echo "<th>" . "Datum/Zeit" . "</th>";
-		echo "</tr>";
-		echo "</thead>";
 		echo "<tbody>";
+		echo "<tr>";
+			echo "<th>Luftfeuchtigkeit</th>";
+			echo "<th>Datum</th>";
+		echo "</tr>";
 		echo "<tr>";
 			echo "<td>" . $row["Luftfeuchtigkeit"] . " %" . "</td>";
 			echo "<td>" . $row["Datum"] . "</td>";
