@@ -6,11 +6,13 @@
     -moz-osx-font-smoothing: grayscale;
 }
 body {
-    background-color: #201f1f;
+	background-color: #201f1f;
+	color: white;
 }
 
 body.loggedin {
 	background-color: #201f1f;
+	color: white;
 }
 .content {
 	width: 1000px;

@@ -44,12 +44,6 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
 		echo "<table>";
-		echo "<thead>";
-		echo "<tr>";
-			echo "<th>" . "Temperatur" . "</th>";
-			echo "<th>" . "Datum/Zeit" . "</th>";
-		echo "</tr>";
-		echo "</thead>";
 		echo "<tbody>";
 		echo "<tr>";
 			echo "<td>" . $row["Temperatur"] . " C&deg;" . "</td>";
