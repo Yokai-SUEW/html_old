@@ -63,6 +63,9 @@ if (mysqli_num_rows($result) > 0) {
 
 require_once('config_status.php');
 
+$sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
+$result = mysqli_query($conn, $sql);
+
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
 		echo "<table>";
