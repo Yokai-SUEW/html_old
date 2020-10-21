@@ -41,14 +41,15 @@ require_once('config_status.php');
 $sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
 $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 0) {
-	while($row = mysqli_fetch_assoc($result)) {
-		echo "<table>";
+echo "<table>";
 		echo "<tbody>";
 		echo "<tr>";
 			echo "<th>Temperatur</th>";
 			echo "<th>Datum</th>";
 		echo "</tr>";
+
+if (mysqli_num_rows($result) > 0) {
+	while($row = mysqli_fetch_assoc($result)) {
 		echo "<tr>";
 			echo "<td>" . $row["Temperatur"] . " C&deg;" . "</td>";
 			echo "<td>" . $row["Datum"] . "</td>";
@@ -70,14 +71,16 @@ require_once('config_status.php');
 $sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
 $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 0) {
-	while($row = mysqli_fetch_assoc($result)) {
-		echo "<table>";
+echo "<table>";
 		echo "<tbody>";
 		echo "<tr>";
 			echo "<th>Luftfeuchtigkeit</th>";
 			echo "<th>Datum</th>";
 		echo "</tr>";
+
+if (mysqli_num_rows($result) > 0) {
+	while($row = mysqli_fetch_assoc($result)) {
+		
 		echo "<tr>";
 			echo "<td>" . $row["Luftfeuchtigkeit"] . " %" . "</td>";
 			echo "<td>" . $row["Datum"] . "</td>";
