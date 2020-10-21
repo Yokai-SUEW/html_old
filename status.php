@@ -54,10 +54,10 @@ if (mysqli_num_rows($result) > 0) {
 			echo "<td>" . $row["Temperatur"] . " C&deg;" . "</td>";
 			echo "<td>" . $row["Datum"] . "</td>";
 		echo "</tr>";
-		echo "</tbody>";
-		echo "</table>";
 	}
 }
+echo "</tbody>";
+echo "</table>";
 		?>
 		</p>
 			</div>
@@ -85,10 +85,10 @@ if (mysqli_num_rows($result) > 0) {
 			echo "<td>" . $row["Luftfeuchtigkeit"] . " %" . "</td>";
 			echo "<td>" . $row["Datum"] . "</td>";
 		echo "</tr>";
-		echo "</tbody>";
-		echo "</table>";
 	}
 }
+echo "</tbody>";
+echo "</table>";
 ?>
 			</p>
 			</div>
