@@ -6,12 +6,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 body {
-	background-color: #6b6b6b;
+	background-color: #424242;
 	color: white;
 }
 
 body.loggedin {
-	background-color: #6b6b6b;
+	background-color: #424242;
 	color: white;
 }
 .content {
@@ -30,7 +30,7 @@ body.loggedin {
     margin: 25px 0;
     padding: 25px;
     color: #ffffff;
-	background-color: #6b6b6b;
+	background-color: #424242;
 }
 .content > p table td, .content > div table td {
     padding: 5px;
