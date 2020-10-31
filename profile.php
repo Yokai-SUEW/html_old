@@ -21,7 +21,7 @@ $stmt->close();
 	<head>
 		<meta charset="utf-8">
 		<title>Profil von <?=$name?></title>
-<link rel="shortcut icon" type="image/png" href="images/logo_favicon.png">
+<link rel="shortcut icon" type="image/png" href="../images/logo_favicon.png">
 		<link href="navbarStyles.css" rel="stylesheet" type="text/css">
 		<link href="mainStyles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
