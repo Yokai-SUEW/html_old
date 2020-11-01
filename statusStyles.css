@@ -13,7 +13,7 @@
 }
 
 .trennStrich {
-    color: red;
+    color: white;
     font-weight: bold; 
 }
 
@@ -25,7 +25,7 @@ th {
     width: 250px;
     text-align: center;
     font-weight: bold; 
-    Color: red; 
+    Color: white; 
 } 
 
 td { 
