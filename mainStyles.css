@@ -11,10 +11,6 @@ body {
 	color: black;
 }
 
-body.loggedin {
-	background-color: white;
-	color: black;
-}
 .content {
 	width: 1000px;
 	margin: 0 auto;
