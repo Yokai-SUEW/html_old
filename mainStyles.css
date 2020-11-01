@@ -24,7 +24,10 @@ body.loggedin {
 	padding: 25px 0;
 	font-size: 22px;
 	border-bottom: 1px solid red;
-	color: #ba2323;
+	border-left: transparent;
+	border-right: transparent;
+	border-top: transparent;
+	color: white;
 }
 .content > p, .content > div {
 	box-shadow: 0 0 5px 0 rgba(255, 0, 0, 2);
