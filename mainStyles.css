@@ -29,12 +29,12 @@ body.loggedin {
 	box-shadow: 0 0 5px 0 rgba(255, 0, 0, 2);
     margin: 25px 0;
     padding: 25px;
-    color: #ffffff;
-	background-color: #424242;
+    color:black;
+	background-color: white;
 }
 .content > p table td, .content > div table td {
     padding: 5px;
-    color: #ffffff;
+    color: black;
 }
 .content > p table td:first-child, .content > div table td:first-child {
 	font-weight: bold;
@@ -46,13 +46,13 @@ body.loggedin {
 	margin: 0 0 10px 0;
 }
 #mail {
-    color: #ffffff;
+    color: black;
 }
 .titel {
     text-align: center;
     font-size: 50px;
     margin: auto;
-    color: #ffffff;
+    color: black;
     border: 1px solid red;
     border-radius: 1mm;
     box-shadow: 0 0 9px 0 rgba(255, 0, 0, 1);
@@ -82,7 +82,7 @@ body.loggedin {
 	border:1px solid #d83526;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:black;
 	font-family:Arial;
 	font-size:28px;
 	font-weight:bold;
