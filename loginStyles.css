@@ -1,13 +1,6 @@
-.header {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 32pt;
-    color: black;
-    text-align: center;
-}
-
 .login {
     width: 400px;
-    background-color: #424242;
+    background-color: rgb(44, 44, 44);
     box-shadow: 0 0 9px 0 rgba(255, 0, 0, 1);
     margin: 100px auto;
 }
@@ -30,7 +23,7 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: #424242;
+    background-color: rgb(44, 44, 44);
     color: #ffffff;
     border: 1px solid red;
 }
@@ -50,7 +43,7 @@
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #424242;
+    background-color: rgb(44, 44, 44);
     border-top: 1px solid red;
     border-left: 0;
     border-right: 0;
@@ -61,6 +54,6 @@
     transition: background-color 0.2s;
 }
 .login form input[type="submit"]:hover {
-  background-color: #424242;
+  background-color: rgb(44, 44, 44);
     transition: background-color 0.2s;
 }
