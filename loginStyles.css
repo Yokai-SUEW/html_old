@@ -1,6 +1,6 @@
 .login {
     width: 400px;
-    background-color: rgb(44, 44, 44);
+    background-color: white;
     box-shadow: 0 0 9px 0 rgba(255, 0, 0, 1);
     margin: 100px auto;
 }
@@ -23,13 +23,13 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: rgb(44, 44, 44);
+    background-color: white;
     color: black;
     border: 1px solid red;
 }
 
 .login form label:hover {
-    background-color: #2e2d2d;
+    background-color: white;
     transition: background-color 0.2s;
 }
 .login form input[type="password"], .login form input[type="text"] {
@@ -43,7 +43,7 @@
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: rgb(44, 44, 44);
+    background-color: white;
     border-top: 1px solid red;
     border-left: 0;
     border-right: 0;
@@ -54,6 +54,6 @@
     transition: background-color 0.2s;
 }
 .login form input[type="submit"]:hover {
-  background-color: rgb(44, 44, 44);
+  background-color: white;
     transition: background-color 0.2s;
 }
