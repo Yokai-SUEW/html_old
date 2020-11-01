@@ -39,7 +39,7 @@ body.loggedin {
 }
 .content > p table td:first-child, .content > div table td:first-child {
 	font-weight: bold;
-	color: #ba2323;
+	color: white;
 	padding-right: 15px;
 }
 .content > div p {
