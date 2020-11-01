@@ -21,12 +21,19 @@ th {
     text-align: center;
     font-weight: bold; 
     Color: white; 
+    border-left: transparent;
+	border-right: transparent;
+    border-top: 1px solid red;
+    border-bottom: transparent;
 } 
 
 td { 
     width: 250px; 
     text-align:center; 
-    border:1px solid red; 
     padding:5px;
     color: white; 
+    border-left: transparent;
+	border-right: transparent;
+    border-top: 1px solid red;
+    border-bottom: transparent;
 } 

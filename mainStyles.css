@@ -24,9 +24,6 @@ body.loggedin {
 	padding: 25px 0;
 	font-size: 22px;
 	border-bottom: 1px solid red;
-	border-left: transparent;
-	border-right: transparent;
-	border-top: transparent;
 	color: white;
 }
 .content > p, .content > div {
