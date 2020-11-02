@@ -56,6 +56,7 @@ if (mysqli_num_rows($result) > 0) {
 			echo "<td>" . $row["Datum"] . "</td>";
 		echo "</tr>";
 	}
+
 }
 echo "</tbody>";
 echo "</table>";
