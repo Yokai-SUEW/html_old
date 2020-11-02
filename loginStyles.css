@@ -1,6 +1,6 @@
 .login {
     width: 400px;
-    background-color: white;
+    background-color: black;
     box-shadow: 0 0 9px 0 rgba(255, 0, 0, 1);
     margin: 100px auto;
 }
@@ -23,13 +23,13 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: white;
+    background-color: black;
     color: black;
     border: 1px solid red;
 }
 
 .login form label:hover {
-    background-color: white;
+    background-color: black;
     transition: background-color 0.2s;
 }
 .login form input[type="password"], .login form input[type="text"] {
@@ -43,7 +43,7 @@
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: white;
+    background-color: black;
     border-top: 1px solid red;
     border-left: 0;
     border-right: 0;
@@ -54,6 +54,6 @@
     transition: background-color 0.2s;
 }
 .login form input[type="submit"]:hover {
-  background-color: white;
+  background-color: black;
     transition: background-color 0.2s;
 }
