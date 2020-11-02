@@ -41,7 +41,7 @@ require_once('config_status.php');
 
 $sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
 $result = mysqli_query($conn, $sql);
-
+echo "<h1>Temperatur</h1>";
 echo "<table>";
 		echo "<tbody>";
 		echo "<tr>";
@@ -72,6 +72,7 @@ require_once('config_status.php');
 $sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
 $result = mysqli_query($conn, $sql);
 
+echo "<h1>Luftfeuchtigkeit</h1>";
 echo "<table>";
 		echo "<tbody>";
 		echo "<tr>";
