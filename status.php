@@ -37,7 +37,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<p>
 <?php
 
-require_once('/config/config_status.php');
+require_once('config/config_status.php');
 
 $sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
 $result = mysqli_query($conn, $sql);
@@ -68,7 +68,7 @@ echo "</table>";
 				<p>
 				<?php
 
-require_once('/config/config_status.php');
+require_once('config/config_status.php');
 
 $sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
 $result = mysqli_query($conn, $sql);

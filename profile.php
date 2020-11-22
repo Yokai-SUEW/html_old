@@ -5,7 +5,7 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
-include_once('/config//config/config_users.php');
+include_once('/config/config_users.php');
 // Die E-Mails und die Passwörter werden nicht in einer Session gespeichert deshalb holen wir diese aus der Datenbank.
 $stmt = $con->prepare('SELECT password, email, username FROM accounts WHERE id = ?');
 // Wir nutzen einfach die Session ID um die Informationen zu bekommen.
