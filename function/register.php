@@ -1,5 +1,5 @@
 <?php
-include_once('/config/config_users.php');
+include_once('/config//config/config_users.php');
 
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 	exit('Please complete the registration form!');

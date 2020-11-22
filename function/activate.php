@@ -1,5 +1,5 @@
 <?php
-include_once('/config/config_users.php');
+include_once('/config//config/config_users.php');
 //Hier wird geschaut ob die eingegebene E-Mail Adresse bereits existiert
 if (isset($_GET['email'], $_GET['code'])) {
 	if ($stmt = $con->prepare('SELECT * FROM accounts WHERE email = ? AND activation_code = ?')) {
