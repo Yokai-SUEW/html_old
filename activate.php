@@ -1,5 +1,5 @@
 <?php
-include_once('/config//config/config_users.php');
+include_once('config_users.php');
 //Hier wird geschaut ob die eingegebene E-Mail Adresse bereits existiert
 if (isset($_GET['email'], $_GET['code'])) {
 	if ($stmt = $con->prepare('SELECT * FROM accounts WHERE email = ? AND activation_code = ?')) {
@@ -14,7 +14,7 @@ if (isset($_GET['email'], $_GET['code'])) {
 				$newcode = 'activated';
 				$stmt->bind_param('sss', $newcode, $_GET['email'], $_GET['code']);
 				$stmt->execute();
-				echo 'Your account is now activated, you can now login!<br><a href="../index.html">Login</a>';
+				echo 'Your account is now activated, you can now login!<br><a href="index.html">Login</a>';
 			}
 		} else {
 			echo 'The account is already activated or doesn\'t exist!';

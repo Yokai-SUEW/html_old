@@ -1,5 +1,5 @@
 <?php
-include_once('/config//config/config_users.php');
+include_once('config_users.php');
 
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 	exit('Please complete the registration form!');
@@ -38,7 +38,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	    $from    = 'noreply@yokai.at';
         $subject = 'Account Activation Required';
         $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-        $activate_link = 'http://yokai.com/phplogin//function/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
+        $activate_link = 'http://yokai.com/phplogin/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
         $message = '<p>Bitte klicken Sie auf diesen Link um ihr Account zu aktivieren: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
         mail($_POST['email'], $subject, $message, $headers);
         echo 'Bitte schauen Sie in ihrem Postfach nach!';

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('config/config_users.php');
+include_once('config_users.php');
 // Hier wird geschaut ob die Daten beim Login mitgesendet wurden oder nicht. isset() schaut ob die Daten vorhanden sind
 if ( !isset($_POST['username'], $_POST['password']) ) {
 	// Daten konnten nicht gefunden werden...
@@ -25,12 +25,12 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            header('Location: ../home.php');
+            header('Location: home.php');
         } else {
-            header('Location: ../pwderror.html');
+            header('Location: pwderror.html');
         }
     } else {
-        header('Location: ../usrerror.html');
+        header('Location: usrerror.html');
     }
 
 
