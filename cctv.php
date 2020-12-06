@@ -15,6 +15,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<link href="navbarStyles.css" rel="stylesheet" type="text/css">
 		<link href="mainStyles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="loggedin">
@@ -28,11 +29,6 @@ if (!isset($_SESSION['loggedin'])) {
 				<a href="logout.php"><abbr title="Logout"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
 			</div>
 		</nav>
-        <div class="content">
-			<h2>CCTV Bilder</h2>
-           <p>
-			
-    	   </p>
-        </div>
+
     </body>
 </html>

@@ -12,92 +12,54 @@ if (!isset($_SESSION['loggedin'])) {
 	<head>
 		<meta charset="utf-8">
 		<title>Profil</title>
-<link rel="shortcut icon" type="image/png" href="../images/logo_normal.png">
+		<link rel="shortcut icon" type="image/png" href="../images/logo_normal.png">
 		<link href="navbarStyles.css" rel="stylesheet" type="text/css">
 		<link href="mainStyles.css" rel="stylesheet" type="text/css">
 		<link href="statusStyles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="loggedin">
-			<nav class="navtop">
-			<div>
-				<h1>Yokai Serverüberwachung</h1>
-				<a href="home.php"><abbr title="Home"><i class="fas fa-home fa-lg" aria-hidden="true"></i></abbr></a>
-				<a href="cctv.php"><abbr title="CCTV"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></a>
-                <a href="status.php"><abbr title="Server Status"><i class="fa fa-server fa-lg" aria-hidden="true"></i></a>
-				<a href="profile.php"><abbr title="My Profile"><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></a>
-				<a href="logout.php"><abbr title="Logout"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
-			</div>
-        </nav>
-        <div class="content">
-		<h2>Server Status</h2>
-		<div class="tempStatus">
-		<h2>Temperatur</h2>
-		<p>
-<?php
 
-require_once('config_status.php');
 
-$sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
-$result = mysqli_query($conn, $sql);
-echo "<h1>Temperatur</h1>";
-echo "<table>";
-		echo "<tbody>";
-		echo "<tr>";
-			echo "<th>Temperatur</th>";
-			echo "<th>Datum</th>";
-		echo "</tr>";
 
-if (mysqli_num_rows($result) > 0) {
-	while($row = mysqli_fetch_assoc($result)) {
-		echo "<tr>";
-			echo "<td>" . $row["Temperatur"] . " C&deg;" . "</td>";
-			echo "<td>" . $row["Datum"] . "</td>";
-		echo "</tr>";
-	}
+			<nav class="navbar bg-dark navbar-dark">
+				<a class="navbar-brand" href="http://yokai.ddns.net/">Yokai Serverüberwachung</a>
 
-}
-echo "</tbody>";
-echo "</table>";
-		?>
-		</p>
-			</div>
-			<div class="humidityStatus">
-				<h2>Luftfeuchtigkeit</h2>
-				<p>
-				<?php
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        	    <span class="navbar-toggler-icon"></span>
+        		</button>
 
-require_once('config_status.php');
-
-$sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status";
-$result = mysqli_query($conn, $sql);
-
-echo "<h1>Luftfeuchtigkeit</h1>";
-echo "<table>";
-		echo "<tbody>";
-		echo "<tr>";
-			echo "<th>Luftfeuchtigkeit</th>";
-			echo "<th>Datum</th>";
-		echo "</tr>";
-
-if (mysqli_num_rows($result) > 0) {
-	while($row = mysqli_fetch_assoc($result)) {
-		
-		echo "<tr>";
-			echo "<td>" . $row["Luftfeuchtigkeit"] . " %" . "</td>";
-			echo "<td>" . $row["Datum"] . "</td>";
-		echo "</tr>";
-	}
-}
-echo "</tbody>";
-echo "</table>";
-?>
-			</p>
-			</div>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+           	<ul class="navbar-nav ml-auto">
+               	<li class="nav-item">
+					<a href="home.php"><abbr title="Home"><i class="fas fa-home fa-lg" aria-hidden="true"></i></abbr> Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="cctv.php"><abbr title="CCTV"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></abbr> CCTV</a>
+				</li>
+				<li class="nav-item">
+					<a href="status.php"><abbr title="Server Status"><i class="fa fa-server fa-lg" aria-hidden="true"></i></abbr> Server Status</a>
+				</li>
+				<li class="nav-item">
+					<a href="profile.php"><abbr title="My Profile"><i class="fas fa-user-circle fa-lg" aria-hidden="true"></i></abbr> My Profile</a>
+				</li>
+				<li class="nav-item">
+					<a href="logout.php"><abbr title="Logout"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></abbr> Logout</a> 
+				</li>
+			</ul>
 		</div>
-		<div>
+			</nav>
+
+
+		<div class="col-md-8 offset-md-2 statusTable">
 
 		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         </body>
 </html>

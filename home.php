@@ -15,6 +15,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<link href="navbarStyles.css" rel="stylesheet" type="text/css">
 		<link href="mainStyles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="loggedin">
@@ -28,18 +29,6 @@ if (!isset($_SESSION['loggedin'])) {
 				<a href="logout.php"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
 			</div>
         </nav>
-		<div class="content">
-			<h2>Home Page</h2>
-			<p>Herzlich Willkommen, <?=$_SESSION['name']?>!</p>
-		<div>
-			<h3>Wozu dient Yokai?</h3>
-			<p>
-			Mit Yokai könnt ihr euren Serverschrank über eine Kamera und einem Magnet Sensor überwachen.
-</p>
-<p>
-			Wenn du weitere Fragen hast kannst du uns <a href="mailto:yokai.noreply@gmail.com" id="mail">hier</a> kontaktieren!
-			</p>
-		</div>
-		</div>
+		
 	</body>
 </html>

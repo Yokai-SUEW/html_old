@@ -25,6 +25,7 @@ $stmt->close();
 		<link href="navbarStyles.css" rel="stylesheet" type="text/css">
 		<link href="mainStyles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="loggedin">
@@ -39,34 +40,5 @@ $stmt->close();
 				<a href="logout.php"><i class="fas fa-sign-out-alt fa-lg" aria-hidden="true"></i></a>
 			</div>
         </nav>
-		<div class="content">
-			<h2>Profil von <?=$_SESSION['name']?></h2>
-			<div>
-				<p>Hier deine Nutzerdaten:</p>
-				<table>
-					<tr>
-						<td>Name:</td>
-						<td><?=$_SESSION['name']?></td>
-					</tr>
-					<tr>
-						<td>BCrypt gehashtes Passwort:</td>
-						<td><?=$password?></td>
-					</tr>
-					<tr>
-						<td>Email:</td>
-						<td><a href="mailto:$email" id="mail"><?=$email?></a></td>
-                    </tr>
-                    <tr>
-                        <td>IP-Adresse:</td>
-                        <td><?php echo $_SERVER["REMOTE_ADDR"];?></td>
-                    </tr>
-                    <tr>
-                        <td>Gerät:</td>
-                        <td><?php $host = gethostbyname();
-                            echo $host;?></td>
-                    </tr>
-				</table>
-			</div>
-		</div>
 	</body>
 </html>
