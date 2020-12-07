@@ -14,6 +14,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<link rel="shortcut icon" type="image/png" href="../images/logo_normal.png">
 		<link href="navbarStyles.css" rel="stylesheet" type="text/css">
 		<link href="mainStyles.css" rel="stylesheet" type="text/css">
+		<link href="homeStyles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 		<script src="https://kit.fontawesome.com/f119331aa3.js" crossorigin="anonymous"></script>
 	</head>
@@ -30,16 +31,46 @@ if (!isset($_SESSION['loggedin'])) {
         </nav>
 		<div class="content">
 			<h2>Home Page</h2>
-			<p>Herzlich Willkommen, <?=$_SESSION['name']?>!</p>
-		<div>
-			<h3>Wozu dient Yokai?</h3>
-			<p>
-			Mit Yokai könnt ihr euren Serverschrank über eine Kamera und einem Magnet Sensor überwachen.
-</p>
-<p>
-			Wenn du weitere Fragen hast kannst du uns <a href="mailto:yokai.noreply@gmail.com" id="mail">hier</a> kontaktieren!
-			</p>
+		<div class="redbox">
+		<i class="fas fa-info"></i>
+			<h3>Was kann Yokai?</h3>
+			<p class="aboutYokai">
+			Yokai dient zur analogen- und digitalen Überwachung eines
+Serverschrankes. Dabei kann man sehen wer wann den Serverschrank geöffnet hat. Aber auch digitale Fingerabdrücke können gespeichert und angezeigt werden. Ebenso werden Temperatur und Luftfeuchtigkeit im Serverschrank selbst gemessen.
+Je nachdem wie die Temperatur im Serverschrank ist werden die Lüftergeschwindigkeiten verändert.
+			 </p>
+			 <h3>Ist das Rechtlich möglich?</h3>
+			 <p class="aboutYokai">
+			 Ja, der Serverschrank ist Eigentum der Schule.
+Solange keine Straftat begangen wird werden weder Bild
+noch andere Informationen benutzt. Ebenso werden
+außerhalb des Serverschrankes Warnschilder zusehen sein
+welche eindeutig darauf hinweisen das der Serverschrank
+überwacht wird.
+			 </p>
+			 <h3>Welche Funktionen bietet Yokai?</h3>
+			 <p>
+			Yokai bietet einige sehr gute Funktionen an:
+			<ul>
+				<li><a href="cctv.php">Live Überwachung des Serverschrankes</a></li>
+				<li><a href="status.php">Status Anzeige von Temperatur und Luftfeuchtigkeit</a></li>
+				<li><a href="status.php">Steuerung der Lüfter die sich im Serverschrank befinden</a></li>
+				<li>Warnung bei Hohen Temperaturen</li>
+			</ul>	
+			 </P>
+			 <h3>Welche Funktionen sind noch nicht eingerichtet?</h3>
+			 <p>
+				<ul>
+				<li><a href="status.php">Steuerung der Lüfter die sich im Serverschrank befinden</a></li>
+				<li>Warnung bei Hohen Temperaturen</li>
+				</ul>
+			 </p>
 		</div>
+		</div>
+		<div class="visitorMessage">
+			Falls du uns ein Feedback über unsere Arbeit da lassen möchtest, eine weitere Idee oder eine Sicherheitslücke gefunden hast, würden wir uns auf deine E-Mail freuen!
+			<br><br>
+			<button class="contactButton"><a href="mailto:yokai.suew@gmail.com">E-Mail an das Yokai Entwicklerteam senden</a></button>
 		</div>
 	</body>
 </html>

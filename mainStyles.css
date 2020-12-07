@@ -22,7 +22,8 @@ body {
 	border-bottom: 1px solid red;
 	color: white;
 }
-.content > p, .content > div {
+
+.redbox {
 	box-shadow: 0 0 5px 0 rgba(255, 0, 0, 2);
     margin: 25px 0;
     padding: 25px;
@@ -45,6 +46,15 @@ body {
     border: 1px solid red;
     border-radius: 1mm;
     box-shadow: 0 0 9px 0 rgba(255, 0, 0, 1);
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+	text-decoration: none;
+	color: white;
+	text-decoration: underline;
 }
 
 /*ERROR STYLES*/
